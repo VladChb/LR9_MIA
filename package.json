@@ -1,0 +1,8 @@
+{
+  "name": "bookhub",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "dotnet publish BookHub.csproj -c Release -o output",
+    "start": "cd output && dotnet BookHub.dll"
+  }
+}
