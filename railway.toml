@@ -2,7 +2,7 @@
 builder = "NIXPACKS"
 
 [build.commands]
-build = "dotnet publish -c Release -o out"
+build = "dotnet publish BookHub.csproj -c Release -o out"
 
 [deploy]
 startCommand = "cd out && dotnet BookHub.dll"
