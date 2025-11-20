@@ -5,4 +5,4 @@ builder = "NIXPACKS"
 build = "dotnet publish BookHub.csproj -c Release -o out"
 
 [deploy]
-startCommand = "cd out && dotnet BookHub.dll"
+startCommand = "cd. /app/publish && dotnet BookHub.dll"
