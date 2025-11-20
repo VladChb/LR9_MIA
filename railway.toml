@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+
+[build.commands]
+build = "dotnet publish -c Release -o out"
+
+[deploy]
+startCommand = "cd out && dotnet BookHub.dll"
