@@ -2,7 +2,7 @@
 builder = "NIXPACKS"
 
 [build.packages]
-dotnet-sdk_8 = "latest"
+dotnet-sdk = ""
 
 [build.commands]
 build = "dotnet publish BookHub.csproj -c Release -o out"
