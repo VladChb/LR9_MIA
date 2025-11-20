@@ -92,5 +92,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
+app.MapGet("/", () => "BookHub API is working!");
+
 var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
 app.Run($"http://0.0.0.0:{port}");
