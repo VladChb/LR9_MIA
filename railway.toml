@@ -1,9 +1,11 @@
 [build]
 builder = "NIXPACKS"
 
+[build.packages]
+dotnet-core = "8.0.416"
+
 [build.commands]
-install = "curl -fsSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0 && export PATH=$HOME/.dotnet:$PATH"
-build = "export PATH=$HOME/.dotnet:$PATH && dotnet publish BookHub.csproj -c Release -o out"
+build = "dotnet publish BookHub.csproj -c Release -o out"
 
 [deploy]
-startCommand = "export PATH=$HOME/.dotnet:$PATH && cd out && dotnet BookHub.dll"
+startCommand = "cd out && dotnet BookHub.dll"
